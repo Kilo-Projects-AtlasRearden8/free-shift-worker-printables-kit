@@ -23,36 +23,40 @@
     <p class="no-print"><strong>Privacy:</strong> This calculator runs entirely in your browser. Nothing is saved or sent anywhere.</p>
   </div>
 
-  <div class="form-grid">
+  <form class="no-print" style="display:flex; gap:4mm; margin-bottom:4mm;">
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
+  </form>
+
+  <form id="pay-form" class="form-grid">
     <div class="field">
       <label>Hourly rate ($)</label>
-      <input id="rate" type="number" step="0.01" min="0" value="30">
+      <input id="rate" name="rate" type="number" step="0.01" min="0" value="30">
     </div>
     <div class="field">
       <label>Hours worked</label>
-      <input id="hours" type="number" step="0.25" min="0" value="12">
+      <input id="hours" name="hours" type="number" step="0.25" min="0" value="12">
     </div>
     <div class="field">
       <label>Shift differential (%)</label>
-      <input id="diff" type="number" step="0.1" min="0" max="100" value="10">
+      <input id="diff" name="diff" type="number" step="0.1" min="0" max="100" value="10">
     </div>
     <div class="field">
       <label>Overtime threshold (hrs)</label>
-      <input id="ot-threshold" type="number" step="0.5" min="0" value="8">
+      <input id="ot-threshold" name="ot-threshold" type="number" step="0.5" min="0" value="8">
     </div>
     <div class="field">
       <label>Overtime multiplier</label>
-      <input id="ot-multiplier" type="number" step="0.25" min="0" value="1.5">
+      <input id="ot-multiplier" name="ot-multiplier" type="number" step="0.25" min="0" value="1.5">
     </div>
     <div class="field">
       <label>Estimated tax (%)</label>
-      <input id="tax" type="number" step="0.1" min="0" max="100" value="20">
+      <input id="tax" name="tax" type="number" step="0.1" min="0" max="100" value="20">
     </div>
     <div class="field">
       <label>Shifts per week</label>
-      <input id="shifts" type="number" step="1" min="0" value="3">
+      <input id="shifts" name="shifts" type="number" step="1" min="0" value="3">
     </div>
-  </div>
+  </form>
 
   <div class="result-card">
     <div class="result-row"><span>Regular hours</span><span class="val" id="out-regular-hours">0</span></div>

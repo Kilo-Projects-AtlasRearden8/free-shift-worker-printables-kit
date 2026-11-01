@@ -13,9 +13,11 @@ Files:
 - `css/style.css` — shared styles with `@media print` and A4 page rules (hides nav, strips backgrounds for print)
 - `css/site.css` — landing page styles
 - `js/pay-calculator.js` — pure `calculatePay()` function plus DOM glue; runs entirely in the browser
+- `test/verify-calculator.js` — Node test suite for `calculatePay()`
 - `src/markdown/*.md` — Markdown sources mirroring each printable's content
 - `README.md` — kit contents, how to use, design notes, Asdale Dynamics, LLC credit, MIT license pointer
 - `LICENSE` — MIT License, copyright line exactly: `Copyright (c) 2026 Asdale Dynamics, LLC`
+- `STATUS.md` — this file
 
 ## How to run it
 
@@ -26,20 +28,26 @@ Open any HTML file directly in a browser (no build step, no server):
 
 To produce a PDF: open a printable, choose File > Print, then Save as PDF / Microsoft Print to PDF. Each page is sized for US Letter or A4 at 100%.
 
+Run the calculator test suite:
+```
+node test/verify-calculator.js
+```
+
 Markdown sources live in `src/markdown/` for editing or republishing.
 
 ## Verification results
 
 Ran with Node.js v20.19.2 (no headless browser or PDF tooling available in this environment).
 
-- All 13 expected files present.
+- All expected files present.
 - `LICENSE` contains the exact copyright line `Copyright (c) 2026 Asdale Dynamics, LLC`.
 - `README.md` and all HTML pages credit Asdale Dynamics, LLC.
 - Every HTML page has `<title>`, `<h1>`, no leftover template placeholders.
 - `css/style.css` contains `@media print` and `@page { size: A4 }`.
-- Pay calculator logic unit-tested in Node by evaluating `calculatePay()` directly:
+- Pay calculator logic unit-tested in Node — all 17 assertions pass:
   - $30/hr, 12 hrs, 10% differential, OT after 8 hrs at 1.5×, 20% tax, 3 shifts/wk → gross $456.00, tax $91.20, net $364.80, weekly gross $1,368.00, monthly gross $5,923.44 — matches hand calculation.
-  - Zero-rate and no-threshold edge cases return sane values.
+  - Zero-rate, no-threshold, and default edge cases return sane values.
+- Bug found and fixed: pay-calculator.html previously had no `<form id="pay-form">`, so the JS DOM glue silently did nothing and the calculator never ran in the browser. Inputs are now wrapped in `<form id="pay-form">` with matching `name` attributes, and `calculatePay()` updates results on every input.
 - No secrets, API keys, or personal data found in any file.
 - No `.github/workflows` files present.
 
@@ -50,4 +58,4 @@ Limitation: actual PDF rendering was not executed locally because no PDF toolcha
 - PDF output not generated or pixel-verified in this session; verify print/PDF output in a real browser before distributing.
 - Printables are blank templates; no pre-filled example data is printed on the forms.
 - Accessibility audit not run (color contrast chosen conservatively, but not tool-verified).
-- No test framework or CI configured (intentionally: no `.github/workflows`).
+- No test framework or CI configured (intentionally: no `.github/workflows`); run `node test/verify-calculator.js` manually.

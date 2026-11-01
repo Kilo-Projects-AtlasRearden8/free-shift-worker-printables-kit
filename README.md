@@ -2,6 +2,8 @@
 
 Free printables for shift workers: shift logs, sleep trackers, shift swap sheets, and a pay calculator. PDF-ready, low-energy design. Credit: Asdale Dynamics, LLC.
 
+If you work rotating shifts, nights, or weekends, this kit is for you. Print any page, fill it in by hand, or type into it on your phone or computer before printing to PDF. Nothing is tracked, nothing leaves your device, and nothing costs anything.
+
 ## What's inside
 
 | Printable | What it's for |
@@ -11,27 +13,27 @@ Free printables for shift workers: shift logs, sleep trackers, shift swap sheets
 | [Shift Swap Sheet](printables/swap-sheet.html) | Request swaps, record trades, collect coworker and manager signatures |
 | [Pay Calculator](printables/pay-calculator.html) | Gross pay, overtime, differentials, tax, weekly/monthly estimates |
 
-Markdown sources for each printable are in [`src/markdown/`](src/markdown/).
+Markdown sources for each printable live in [`src/markdown/`](src/markdown/), so you can edit or republish them however you like.
 
 ## How to use
 
-1. Open any form above in your browser.
-2. Fill it in on screen, or print it blank and fill it in by hand.
-3. To save as PDF: choose **File > Print**, then **Save as PDF** (or **Microsoft Print to PDF**). Background colors are removed automatically for cheap printing.
-4. Print at 100% on US Letter or A4 paper. Each page is sized to fit one sheet.
+1. **Open any form** in your web browser (no install needed).
+2. **Fill it in** on screen, or print it blank and fill it in by hand.
+3. **Save as PDF:** choose **File > Print**, then **Save as PDF** (or **Microsoft Print to PDF** on Windows). Background colors are removed automatically, so it's cheap to print.
+4. **Print at 100%** on US Letter or A4 paper. Each page fits on one sheet.
 
 ## Design notes
 
-- **Low-energy design:** soft colors, high contrast, plenty of whitespace — easy to read when you're tired after a shift.
-- **PDF-ready:** built-in print stylesheet hides navigation and strips backgrounds for printing.
-- **Client-side only:** the pay calculator runs in your browser. Nothing is saved, tracked, or sent anywhere.
+- **Low-energy design:** soft colors, high contrast, and plenty of whitespace — easy to read when you're tired after a shift.
+- **PDF-ready:** a built-in print stylesheet hides navigation and strips backgrounds for printing.
+- **Client-side only:** the pay calculator runs entirely in your browser. Nothing is saved, tracked, or sent anywhere.
 - **No sign-up, no accounts, no secrets.**
 
 ## Who this is for
 
-Made by [Asdale Dynamics, LLC](https://dylanasdale.github.io), founded by Dylan Asdale — registered nurse turned AI author and founder of Asdale Dynamics, LLC (Indiana, formed Oct 2026). The LLC publishes beginner-friendly AI education, books, guides, and practical tools. This kit is part of the accessible life-admin helpers line: low-energy productivity tools for healthcare workers and anyone on a rotating schedule.
+Made by [Asdale Dynamics, LLC](https://dylanasdale.github.io), founded by Dylan Asdale — registered nurse turned AI author and founder of Asdale Dynamics, LLC (Indiana, formed Oct 2026). Dylan writes [The Massive AI Manual](https://dylanasdale.github.io) and runs the hub site [dylanasdale.github.io](https://dylanasdale.github.io), which explain AI "like a friend would": plain English, step by step, never condescending.
 
-Related: [The Massive AI Manual](https://dylanasdale.github.io) and the hub site [dylanasdale.github.io](https://dylanasdale.github.io) explain AI "like a friend would": plain English, step by step, never condescending.
+The LLC publishes beginner-friendly AI education, books, guides, and practical tools. This kit is part of the accessible life-admin helpers line: low-energy productivity tools for healthcare workers and anyone on a rotating schedule.
 
 ## License
 
