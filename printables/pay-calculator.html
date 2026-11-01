@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pay Calculator — Shift Worker Printables Kit</title>
+<meta name="description" content="Printable pay calculator for shift workers: gross pay, overtime, differentials, tax, weekly and monthly estimates. By Asdale Dynamics, LLC.">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/pay-calculator.js"></script>
+</head>
+<body>
+<div class="print-page">
+  <header class="print-header">
+    <p class="kit">Asdale Dynamics, LLC &bull; Free printables</p>
+    <h1>Pay Calculator</h1>
+    <p class="sub">Work out gross pay, overtime, shift differentials, tax, and weekly/monthly estimates for a single shift.</p>
+    <a class="back-link no-print" href="../index.html">&#8592; Back to kit</a>
+  </header>
+
+  <div class="instructions">
+    <p><strong>How to use:</strong> Enter your hourly rate, hours worked, shift differential percent, overtime threshold, overtime multiplier, and estimated tax percent. Results calculate automatically as you type. Print this page or save as PDF to keep a copy with your pay records.</p>
+    <p><strong>Example:</strong> $30/hour &bull; 12-hour night shift &bull; 10% differential &bull; overtime after 8 hours at 1.5&times; &bull; 20% estimated tax.</p>
+    <p class="no-print"><strong>Privacy:</strong> This calculator runs entirely in your browser. Nothing is saved or sent anywhere.</p>
+  </div>
+
+  <div class="form-grid">
+    <div class="field">
+      <label>Hourly rate ($)</label>
+      <input id="rate" type="number" step="0.01" min="0" value="30">
+    </div>
+    <div class="field">
+      <label>Hours worked</label>
+      <input id="hours" type="number" step="0.25" min="0" value="12">
+    </div>
+    <div class="field">
+      <label>Shift differential (%)</label>
+      <input id="diff" type="number" step="0.1" min="0" max="100" value="10">
+    </div>
+    <div class="field">
+      <label>Overtime threshold (hrs)</label>
+      <input id="ot-threshold" type="number" step="0.5" min="0" value="8">
+    </div>
+    <div class="field">
+      <label>Overtime multiplier</label>
+      <input id="ot-multiplier" type="number" step="0.25" min="0" value="1.5">
+    </div>
+    <div class="field">
+      <label>Estimated tax (%)</label>
+      <input id="tax" type="number" step="0.1" min="0" max="100" value="20">
+    </div>
+    <div class="field">
+      <label>Shifts per week</label>
+      <input id="shifts" type="number" step="1" min="0" value="3">
+    </div>
+  </div>
+
+  <div class="result-card">
+    <div class="result-row"><span>Regular hours</span><span class="val" id="out-regular-hours">0</span></div>
+    <div class="result-row"><span>Overtime hours</span><span class="val" id="out-ot-hours">0</span></div>
+    <div class="result-row"><span>Base pay</span><span class="val" id="out-base-pay">0.00</span></div>
+    <div class="result-row"><span>Overtime pay</span><span class="val" id="out-ot-pay">0.00</span></div>
+    <div class="result-row"><span>Shift differential</span><span class="val" id="out-differential">0.00</span></div>
+    <div class="result-row"><b>Gross pay (this shift)</b><span class="val" id="out-gross">0.00</span></div>
+    <div class="result-row"><span>Estimated tax</span><span class="val" id="out-tax">0.00</span></div>
+    <div class="result-row"><b>Net pay (this shift)</b><span class="val" id="out-net">0.00</span></div>
+    <div class="result-row"><span>Gross per week</span><span class="val" id="out-weekly-gross">0.00</span></div>
+    <div class="result-row"><span>Net per week</span><span class="val" id="out-weekly-net">0.00</span></div>
+    <div class="result-row"><span>Gross per month (est.)</span><span class="val" id="out-monthly-gross">0.00</span></div>
+    <div class="result-row"><b>Net per month (est.)</b><span class="val" id="out-monthly-net">0.00</span></div>
+  </div>
+
+  <div class="flag">
+    <strong>Estimate only.</strong> Actual pay depends on your employer's policies, local tax withholding, benefits deductions, and labor laws. This tool is for personal planning — it is not payroll or tax advice.
+  </div>
+
+  <footer class="credit">
+    &copy; 2026 Asdale Dynamics, LLC. Free printable for shift workers — education only, not financial or tax advice.<br>
+    MIT Licensed. <a href="../index.html">Full kit</a>
+  </footer>
+</div>
+</body>
+</html>
